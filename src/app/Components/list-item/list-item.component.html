@@ -1,0 +1,29 @@
+
+<div>
+  <div class="task-info">
+    <mat-list>
+        <mat-list-item class="listitem" *ngFor='let todo of todos'>
+          <table>
+            <thead>
+              <td colspan="1"><h3 matLine class="title"> {{todo.title}}</h3></td>
+              <td colspan="1">
+                <mat-select class='dropbox'>
+                <mat-option  *ngFor="let value of status.values()" [value] = value>{{value}}</mat-option>
+              </mat-select>
+              </td>
+            </thead>
+            <tbody>
+            <td colspan="2">
+            <p matLine class="description">
+              <span> {{todo.description}} </span>
+            </p>
+          </td>
+            </tbody>
+          </table>
+        </mat-list-item>
+    </mat-list>
+  </div>
+</div>
+
+
+

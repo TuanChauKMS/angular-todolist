@@ -1,0 +1,13 @@
+<form [formGroup]= 'inputForm' (ngSubmit) = 'CreateNewItem()' class="todo-form">
+  <mat-form-field class="todo-full-width">
+    <mat-label class="title">Title</mat-label>
+    <input class="input-field" formControlName="title" matInput placeholder="Whatcha doin??" [(ngModel)]= 'newTodo.title'>
+  </mat-form-field>
+
+  <mat-form-field class="todo-full-width">
+    <mat-label class="title">Description</mat-label>
+    <input class="input-field" name='desc' formControlName="desc" matInput placeholder="Ex. Create a new bug...." [(ngModel)]= 'newTodo.description'>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Create Task</button>
+</form>
